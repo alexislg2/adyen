@@ -166,7 +166,6 @@ where `PAYMENT_ID` is the primary key value of the `Payment` model instance.
 `pay()` takes a function to build an absolute URI from only the path part. If
 you have a `Request` handy, pass `request.build_absolute_uri`.
 
-
 ```python
 # settings.py
 
@@ -243,6 +242,8 @@ class NotificationView(django_views.NotificationView):
 
         # handle
 ```
+
+Don't forget to run migrations: `python manage.py migrate`
 
 You can write your own backend and configure `django_adyen` to use it like
 this:
